@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Buy Movie Tickets</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Movie Ticket Prices</h1>
+
+      <div>
+<br>
+          <form id="ticket-prices">
+            <h4>What movie do you want to see?</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="typeOfMovie" value="newRelease" checked>
+                NEW Release of A Horror Movie
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="typeOfMovie" value="secondRun">
+                Second-Run of Some Boring RomCom
+              </label>
+            </div>
+<br>
+            <h4>When do you wanna watch?</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="timeOfDay" value="matinee" checked>
+                Matinee
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="timeOfDay" value="evening">
+                Evening Movies Are The Best!
+              </label>
+            </div>
+<br>
+            <h4>Mind if we ask your age?</h4>
+            <div class="form-group">
+              <label for="ageNumber"></label>
+              <input type="text" class="form-control" id="ageNumber">
+            </div>
+
+            <button type="submit" class="btn">Show Me The Price</button>
+
+          </form>
+
+          <h2>Ticket Prices:</h2>
+            <ul id="prices">
+
+            </ul>
+
+      </div>
+    </div>
+  </body>
+</html>
