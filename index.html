@@ -5,59 +5,38 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Buy Movie Tickets</title>
+    <title>Pig Dice</title>
   </head>
   <body>
     <div class="container">
-      <h1>Movie Ticket Prices</h1>
+      <h1>Pig Dice</h1>
+        <div class="row">
+          <div class="col-md-6">
 
-      <div>
-<br>
-          <form id="ticket-prices">
-            <h4>What movie do you want to see?</h4>
-            <div class="radio">
-              <label>
-                <input type="radio" name="typeOfMovie" value="newRelease" checked>
-                NEW Release of A Horror Movie
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="typeOfMovie" value="secondRun">
-                Second-Run of Some Boring RomCom
-              </label>
-            </div>
-<br>
-            <h4>When do you wanna watch?</h4>
-            <div class="radio">
-              <label>
-                <input type="radio" name="timeOfDay" value="matinee" checked>
-                Matinee
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="timeOfDay" value="evening">
-                Evening Movies Are The Best!
-              </label>
-            </div>
-<br>
-            <h4>Mind if we ask your age?</h4>
-            <div class="form-group">
-              <label for="ageNumber"></label>
-              <input type="text" class="form-control" id="ageNumber">
-            </div>
+          <form id="player1">
 
-            <button type="submit" class="btn">Show Me The Price</button>
+
+            <button type="submit" class="btn">Roll the dice</button>
 
           </form>
+          <h2>Player1 score:</h2>
+            <ul id="player1-score">
+            </div>
+            <div class="col-md-6">
 
-          <h2>Ticket Prices:</h2>
-            <ul id="prices">
+            <form id="player2">
+
+
+              <button type="submit" class="btn">Roll the dice</button>
+
+            </form>
+            <h2>Player2 score:</h2>
+              <ul id="player2-score">
+          </div>
+        </div>
+
 
             </ul>
-
-      </div>
     </div>
   </body>
 </html>
