@@ -1,83 +1,60 @@
 //business logic
 //set global vaiable
 //Set Objects
-function Player(name1, score) {
+
+function Player(name1, score, total) {
   this.name1 = name1;
   this.score = score;
+  this.total = total;
 }
-//var total = 0;
-var playerOne = new Player("Player1", 0);
-var playerTwo = new Player("Player2", 0);
 
-//Set Object Prototypes
+var playerOne = new Player("Player1", 0, 0);
+var playerTwo = new Player("Player2", 0, 0);
+var random = randomNumber();
 
-function showScore() {
-return Math.floor((Math.random() * 6) + 1);
+function randomNumber() {
+  return Math.floor((Math.random() * 6) + 1);
 }
-var yourFirstScore = showScore();
-alert (yourFirstScore);
-
-
-Player.prototype.play = function() {
-  return this.score += yourFirstScore;
+  alert("Hi" + random);
+Player.prototype.calcScore = function() {
+  if (random === 1) {
+  this.score += 0;
+  } else {
+  this.score += random;
+  }
 }
-var yourFirstScore1 = playerOne.play();
-alert(playerOne.play());
 
 
+Player.prototype.calcTotal = function() {
+  this.total += this.score;
+  this.score = 0;
+  }
 
 
-//Player.prototype.total = function() {
-//return yourFirstScore1 + yourFirstScore;
-//}
-//alert(playerOne.total());
+function gameOver() {
+  if (playerOne.total >= 100) {
+    alert(playerOne.name1 + " You are the winner!");
+  }
+}
 
-//function rollDice() {
-       //var diceTotal = 0;
-       //diceTotal += this.showScore();
-       //return diceTotal;
-    //}
-
-//alert(rollDice());
-
-
-
-//var grandTotal1 = function(number) {}
-//Contact.prototype.fullName = function() {
-  //return this.firstName + " " + this.lastName;
-//}
-//alert(PlayerScore);
-
-
-//function showTotalScore() {
-//return (yourFirstScore + 1);
-//}
-
-//User interface logic
-
+////USER INTERFACE////
 $(document).ready(function() {
-  $("form#player1").submit(function(event){
-    var playerOne = new Player("Player1", 0);
-var x = playerOne.play();
-alert("hi");
-alert(x);
-  var yourFirstScore = showScore();
-  var yourFirstTotalScore = play();
-alert (yourFirstScore);
-    $("ul#player1-score").text(yourFirstScore);
-    //event.preventDefault();
-    $("ul#player2-total-score").text(yourFirstTotalScore);
-    event.preventDefault();
+  $("#button-roll1").click(function(){
+
+    $("ul#player1-roll").text(random);
+    playerOne.calcScore();
+playerOne.calcTotal();
+
+    $("#player1-total-score").text(playerOne.total);
+
+    gameOver();
   });
+});
+
+////////////////////// Player 2/////////////////////////////
+//$("#button-roll2").submit(function(event) {
 
 
-
-  $("form#player2").submit(function(event) {
-
-    var playerTwo = new Player("Player2", 0);
-    var yourSecondScore = showScore();
-    $("ul#player2-score").text(yourSecondScore);
-    //$("ul#player2-total-score").text(yourSecondTotalScore);
-    event.preventDefault();
-    });
-  });
+  //var yourSecondScore = showScore();
+  //$("ul#player2-roll").text(yourSecondScore);
+  //$("ul#player2-total-score").text(yourSecondTotalScore);

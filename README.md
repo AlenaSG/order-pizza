@@ -1,12 +1,12 @@
-# address-book
+# Pig Dice
 
-##### Movie Ticket Price Calculator
+##### Pig Dice
 
-#### By Laura Hamilton & Alena Golovina
+#### By Alena Golovina
 
 ## Description
 
-This application is a demonstration of constructors and prototypes using JavaScript to create a simple movie price calculator based on the inputted user variables.
+This application is a Pig Dice game for two players.
 
 ## Code Specs
 
@@ -14,18 +14,10 @@ This application is a demonstration of constructors and prototypes using JavaScr
 |---|---|---|
 |The user selects parameters in each field and enters age and a ticket price is displayed based on the inputs|Age: 65, Movie: First-Release, Time: Evening|$15|
 |Senior age, in the evening, second-run movie|Age:66, Time: Evening, Second-Run|$10|
-|Adult age, in the evening, second-run movie|Age:64, Time: Evening, Second-Run|$15|
-|Child age, in the evening, second-run movie|Age:10, Time: Evening, Second-Run|$5|
-|Senior age, Matinee, second-run movie|Age:67, Time: Matinee, Second-Run|$7|
-|Adult age, Matinee, new release|Age:44, Time: Matinee, New Release|$12|
-|Child age, Matinee, second-run movie|Age:1, Time: Matinee, Second-Run|$2|
-|Senior age, in the evening, new release|Age:68, Time: Evening, New release|$15|
-|Adult age, in the evening, new release|Age:11, Time: Evening, New Release|$20|
-|Child age, in the evening, new release|Age:5, Time: Evening, New Release|$10|
 
 ## Setup
 
-Install address-book by cloning this repository.
+Install Pig Dice by cloning this repository.
 
 ## Technologies Used
 
@@ -33,7 +25,7 @@ JavaScript and jQuery
 
 ### Legal
 
-Copyright (c) 2017 Laura Hamilton & Alena Golovina
+Copyright (c) 2017 ßAlena Golovina
 
 This software is licensed under the MIT license.
 
