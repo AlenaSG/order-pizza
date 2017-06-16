@@ -1,60 +1,35 @@
-//business logic
-//set global vaiable
-//Set Objects
-
-function Player(name1, score, total) {
-  this.name1 = name1;
-  this.score = score;
-  this.total = total;
+//BUSINESS LOGIC
+function Pizza(size, toppings) {
+  this.size = size;
+  this.toppings = toppings;
 }
 
-var playerOne = new Player("Player1", 0, 0);
-var playerTwo = new Player("Player2", 0, 0);
-var random = randomNumber();
-
-function randomNumber() {
-  return Math.floor((Math.random() * 6) + 1);
-}
-  alert("Hi" + random);
-Player.prototype.calcScore = function() {
-  if (random === 1) {
-  this.score += 0;
-  } else {
-  this.score += random;
-  }
+function Clear() {
+$("input:radio[name=size]:checked").val("");
+$("input:checkbox[name=topping]:checked").val("");
 }
 
 
-Player.prototype.calcTotal = function() {
-  this.total += this.score;
-  this.score = 0;
-  }
 
-
-function gameOver() {
-  if (playerOne.total >= 100) {
-    alert(playerOne.name1 + " You are the winner!");
-  }
-}
-
-////USER INTERFACE////
+// USER INTERFACE LOGIC
 $(document).ready(function() {
-  $("#button-roll1").click(function(){
+  $("form#order-pizza").submit(function(event) {
+      event.preventDefault();
 
-    $("ul#player1-roll").text(random);
-    playerOne.calcScore();
-playerOne.calcTotal();
+//var newPizza = new Pizza(size, topping);
+      //var price = add(number1, number2);
+    //  $("#price").text(price);
+var size = $("input:radio[name=size]:checked").val();
+$("#size").text(size);
+$("input:checkbox[name=topping]:checked").each(function(){
+  var toppingMode = $(this).val();
+  $('#summary').append(toppingMode + "<br>");
 
-    $("#player1-total-score").text(playerOne.total);
-
-    gameOver();
-  });
+$("#receipt").show();
 });
-
-////////////////////// Player 2/////////////////////////////
-//$("#button-roll2").submit(function(event) {
-
-
-  //var yourSecondScore = showScore();
-  //$("ul#player2-roll").text(yourSecondScore);
-  //$("ul#player2-total-score").text(yourSecondTotalScore);
+ $('#order-pizza').hide();
+});
+});
+//var number1 = parseInt($("#input1").val());
+//var number2 = parseInt($("#input2").val());
+//var operator = $("input:radio[name=operator]:checked").val();
