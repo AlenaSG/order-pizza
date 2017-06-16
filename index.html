@@ -5,49 +5,49 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Pig Dice</title>
-  </head>
+    <title>Order Pizza</title>
+</head>
   <body>
+
     <div class="container">
-      <h1>Pig Dice</h1>
-        <div class="row">
-          <div class="col-md-6">
+      <form id="order-pizza">
+<h2>Welcome to our on-line pizza shop!</h2>
+        <div class="form-group">
+          <p>Please choose one or more toppings for your pizza:</p>
+          <input type="checkbox" name="topping" value="cheese">cheese<br>
+          <input type="checkbox" name="topping"value="pepperoni">pepperoni<br>
+          <input type="checkbox" name="topping"value="artichoke">artichoke<br>
+          <input type="checkbox" name="topping"value="anchovy">anchovy<br>
+          <input type="checkbox" name="topping"value="mushrooms">mushrooms<br>
+          <input type="checkbox" name="topping"value="veggies">veggies<br>
+          <input type="checkbox" name="topping"value="chicken">chicken<br>
+  </div>
+<p>Please choose your pizza size:</p>
+<div class="radio">
+  <label>
+    <input type="radio" name="size" value="small">
+    small
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="size" value="medium">
+    medium
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="size" value="large">
+    large
+  </label>
+</div>
+<button type="submit">Confirm Pizza Order</button>
+</form>
+<div id="receipt">
+  <h2>Thank you for your order!</h2>
+<h2>Your pizza price is: $ <span id="price"></span>.
+<h4>You ordered a <span id="size"></span> pizza with:<span id="summary"></span></h4>
+</div>
 
-
-            <button id="button-roll1" type="submit" class="btn">Roll the dice</button>
-<br>
-
-          <h3>Player1 roll:</h3>
-          <ul id="dice1">
-          </ul>
-
-            <ul id="player1-roll">
-            </ul>
-            <h3>Player1 total score:</h3>
-                <ul id="player1-total-score">
-                </ul>
-            </div>
-
-
-            <div class="col-md-6">
-
-
-
-              <button id="button-roll2" type="submit" class="btn">Roll the dice</button>
-<br>
-
-            <h3>Player2 roll:</h3>
-              <ul id="player2-roll">
-              </ul>
-
-                <h3>Player2 total score:</h3>
-                  <ul id="player2-total-score">
-                  </ul>
-          </div>
-        </div>
-
-
-            </ul>
-    </div>
   </body>
 </html>
