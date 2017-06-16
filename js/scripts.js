@@ -1,8 +1,19 @@
 //BUSINESS LOGIC
-function Pizza(size, toppings) {
+function Pizza(size) {
   this.size = size;
-  this.toppings = toppings;
+  //this.toppings = toppings;
 }
+
+Pizza.prototype.price = function () {
+  if (size === "small") {
+    price = 5;
+  } else if (size === "medium") {
+    price = 8;
+  } else {
+    price = 10;
+  }
+  return price;
+};
 
 function Clear() {
 $("input:radio[name=size]:checked").val("");
@@ -16,15 +27,17 @@ $(document).ready(function() {
   $("form#order-pizza").submit(function(event) {
       event.preventDefault();
 
-//var newPizza = new Pizza(size, topping);
-      //var price = add(number1, number2);
-    //  $("#price").text(price);
-var size = $("input:radio[name=size]:checked").val();
-$("#size").text(size);
+
+
+    var newPizza = new Pizza(sizeResult);
+
+var sizeResult = $("input:radio[name=size]:checked").val();
+$("#size").text(sizeResult);
 $("input:checkbox[name=topping]:checked").each(function(){
   var toppingMode = $(this).val();
   $('#summary').append(toppingMode + "<br>");
-
+  var priceResult = newPizza.price();
+$("#price").text(priceResult);
 $("#receipt").show();
 });
  $('#order-pizza').hide();
